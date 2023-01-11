@@ -1,0 +1,106 @@
+#btn_cargar_datos{
+  
+  margin-top:80px;
+  width:100%;
+  height:80px;
+  background-color:#3463b7;
+  color:White;
+  border-radius:10%;
+  
+}
+form{
+  
+  margin-bottom:20px;
+  font-size:20px;
+}
+.container{
+  margin-top:40px;
+  
+}
+h1{
+  margin-top:80px;
+  font-size:60px;
+  background-color:Coral;
+ text-align:center;
+ background-color:#457e8e;
+ color:White;
+ font-family: 'Aboreto';
+}
+nav{
+  
+  margin-top:-40px;
+}
+#plantilla1{
+  
+  overflow:hidden;
+  background-image:url("../plantilla1.png");
+  height:200px;
+}
+#fila_titulo{
+  
+  height:200px;
+  
+}
+#contenedor{
+  
+  width:90%;
+ column-count:center;
+}
+
+#foto1{
+
+  margin-top:30px;
+  border-radius:100%;
+ 
+  
+}
+#datos_personales{
+  
+  margin-top:60px;
+  
+}
+#nombre_apellido{
+  font-size:20px;
+  margin-bottom:80px;
+}
+
+#experiencia_laboral{
+  margin-top:80px;
+ 
+}
+#habilidades{
+  margin-top:80px;
+}
+#historial_academico{
+  margin-top:40px;
+  
+  
+}
+#columna-plantilla2{
+  
+  height:160px;
+}
+#foto_plantilla2{
+  width:100px;
+  height:100px;
+  border-radius:100%;
+ 
+}
+#plantilla3{
+  background-image:url("../fondo.jpg");
+}
+#plantilla2{
+  background-color:#ffeccb
+}
+#prueba{
+  height:100%;
+  
+  
+}
+#fondo3{
+  margin-top:50px;
+}
+#ka{
+  background-color:#e0e4dd
+
+}

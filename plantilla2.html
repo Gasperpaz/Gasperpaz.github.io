@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Formulario para curriculum vitae</title>
+	<!-- tipografia-->
+	<link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/formulario.css" rel="stylesheet">
+
+	<script src="js/bootstrap.min.js"></script>
+
+
+
+	
+
+  </head>
+
+  <body>
+
+	<div>
+	  <nav class="navbar navbar-expand-md bg-light position-fixed w-100 " >
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">CV</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			  <li class="nav-item">
+				<a id="datos_personales_visible"class="nav-link " aria-current="page" href="#datos_personales">Datos Personales</a>
+			  </li>
+			  <li class="nav-item">
+				<a id="historial_academico_visible" class="nav-link" href="#historial_academico">Historial academico</a>
+			  </li>
+			  <li class="nav-item">
+				<a id="experiencia_laboral_visible"class="nav-link " aria-current="page" href="#experiencia_laboral">Experiencia laboral</a>
+			  </li>
+			  <li class="nav-item">
+				<a id="habilidades_visible"class="nav-link" href="#habilidades">Habilidades</a>
+			  </li>
+
+			</ul>
+
+
+		  </div>
+		</div>
+	  </nav>
+
+	</div>
+
+
+	<div class="container">
+
+	  <form class="row " name="formulario" action="" >
+		<div id="datos_personales" >
+
+
+		  <div>
+		    <h1>DATOS PERSONALES</h1>
+		  </div>
+
+
+		  <div class="col-md-4">
+			<label for="nombre" class="form-label">Nombre</label>
+			<input type="text" class="form-control" id="nombre" required>
+
+		  </div>
+		  <div class="col-md-4">
+			<label for="apellido" class="form-label">Apellido</label>
+			<input type="text" class="form-control" id="apellido" required>
+
+		  </div>
+
+		  <div class="col-md-4">
+			<label for="correo_electronico" class="form-label">Correo electronico</label>
+
+
+			<input type="email" class="form-control" id="correo_electronico" placeholder="name@example.com" required>
+
+
+		  </div>
+		  <div class="col-md-6">
+			<label for="nacionalidad" class="form-label">Nacionalidad</label>
+			<input type="text" class="form-control" id="nacionalidad" required>
+
+		  </div>
+		  <div class="col-md-3">
+			<label for="estado_civil" class="form-label">Estado Civil</label>
+			<select class="form-select" id="estado_civil" required>
+			  <option selected disabled value="">Elige...</option>
+			  <option>Casado</option>
+			  <option>Soltero</option>
+			</select>
+
+		  </div>
+		  <div class="col-md-3">
+			<label for="edad" class="form-label">Edad</label>
+			<input type="number" class="form-control" id="edad" required>
+
+		  </div>
+
+		  <div class="col-md-6">
+			<label for="celular" class="form-label">Celular</label>
+			<input type="number" class="form-control" id="celular"placeholder="Cod-area + numero sin el 15" required>
+
+		  </div>
+		  <div class="col-12">
+			<label for="foto" class="form-label">Subir foto</label>
+			<input class="form-control" type="file" accept="image/*"onchange="imagen_cv()" id="foto">
+		  </div>
+		</div>
+		<div id="historial_academico" style="display:none">
+		  <div>
+			<h1 >HISTORIAL ACADEMICO</h1>
+
+		  </div>
+
+		  <div class="col-md-3">
+			<label for="estudios" class="form-label">Estudios cursados</label>
+			<select class="form-select" id="estudios" required>
+			  <option selected disabled value="">Elige...</option>
+			  <option>Primaria completo</option>
+			  <option>Secundaria completo</option>
+			  <option>Terciario</option>
+			  <option>Universitario completo</option>
+
+			</select>
+
+		  </div>
+		  <div class="col-md-3">
+			<label for="titulo" class="form-label">Titulo </label>
+			<input type="text" class="form-control" id="titulo" required>
+
+		  </div>
+
+		  <div class="col-md-6">
+			<label for="cursos" class="form-label">Otos cursos realizado </label>
+			<input type="text" class="form-control" id="cursos" placeholder="ej: curso de electrisista , gasista , etc."  required>
+
+		  </div>
+		  <div class="col-md-3"style="display:none">
+			<label for="idioma" class="form-label">Idiomas </label>
+			<input type="text" class="form-control" id="idioma" required>
+
+		  </div>
+		</div>
+		<div id="experiencia_laboral"style="display:none">
+		  <div>
+			<h1>EXPERIENCIA LABORAL</h1>
+		  </div>
+
+		  <div class="col-12">
+			<label for="experiencia" class="form-label">Experiencia laboral</label>
+			<textarea class="form-control" id="experiencia" rows="5" placeholder="Describe tu puesto laboral, años trabajado y el nombre de la empresa."  ></textarea>
+		  </div>
+		</div>
+
+		<div id="habilidades"style="display:none">
+		  <div>
+
+			<h1>HABILIDADES</h1>
+		  </div>
+
+		  <div class="col-12">
+			<label for="habilidad" class="form-label">Habilidades</label>
+			<textarea class="form-control" id="habilidad" rows="5"  ></textarea>
+		  </div>
+
+		  <div class="col-12">
+			<button type="submit" onclick="datos_formulario()"  id="btn_cargar_datos">CARGAR DATOS</button>
+		  </div>
+		</div>
+	  </form>
+
+	</div>
+
+
+	
+	<!-- PLANTILLA 2 -->
+	<div id="plantilla"style="display:none">
+
+	<div  class="container" id="plantilla2">
+	  <div class="row-cols-1 btn btn-danger w-100"  >
+		<div class="col-2 btn ">
+		  <div class="row  ">
+
+			<img class="col-12  btn"  id="fotos" width="50%" height="50%" style="border-radius:100%;"alt="plantilla2"> 
+
+		  </div>
+		  <div class="row  " style="height:100px">
+			<h4 class="col-8 btn" id="nombre_apellido"> </h4>
+		  </div>
+		</div>
+		<div class="col-2  btn">
+		</div>
+		<div class="col-4 btn">
+		  <h6 class="col-5 " id="correo"></h6>
+		  <h6 id="nacion"></h6>
+		  <h6 id="estadoCivil"></h6>
+		  <h6 id="edades"></h6>
+		  <h6 id="celula"></h6>
+		</div>
+	  </div>
+
+
+	<div class="row btn  w-100 ">
+	  <div class="col-6 btn">
+		<div id="historial_academico">
+		  <h6 class="btn btn-success">HISTORIAL ACADEMICO</h6>
+		  <h6 class="col-5" id="estudio"> </h6>
+		  <h6 class="col-5" id="titul"> </h6>
+		  <h6 class="col-5" id="curso"> </h6>
+		  <h6 class="col-5" id="idiom"></h6>
+		</div>
+	  
+		<div id="experiencia_laboral">
+		  <h4 class="btn btn-success">EXPERIENCIA LABORAL</h4>
+		  <h6 id="experienci"></h6>
+		</div>
+
+	  </div>
+	  <div class="col-4 btn">
+		<div id="habilidades2">
+		  <h4 class="btn btn-success"> HABILIDADES  </h4>
+		  <h6 id="habilida"></h6>
+		</div>
+	  </div>
+
+	</div>
+	</div>
+	</div>
+	<br><br><br>
+	
+	
+<script type="text/javascript" src="js/javascript.js">
+</script>
+
+  </body>
+
+</html>
