@@ -91,29 +91,9 @@ function datos_formulario(){
 	.style.display = "block";
 	
 }
-		
-function planillas(){
 	
-	if (planilla1){
-		
-		alert("planilla1");
-	}
-	if(planilla2){
-		
-		alert("planilla2");
-		
-	}
-	if(planilla3){
-		
-		
-		alert("planilla3");
-	}
-	
-}
-
-
-
-
+// funcion para seleccionar la foto y ponerla
+// en el la plantilla
 
         function imagen_cv() {
   var img_foto = document.getElementById("fotos");
@@ -128,4 +108,51 @@ function planillas(){
   if (foto_seleccionada) {
     reader.readAsDataURL(foto_seleccionada);
   }
+}
+
+//funcion para el boton siguiente
+// del formulario
+
+function datos_personales(){
+	document.getElementById("datos_personales")
+	.style.display = "block";
+	document.getElementById("historial_academico")
+	.style.display = "none";
+	document.getElementById("experiencia_laboral")
+	.style.display = "none";
+	document.getElementById("habilidades")
+	.style.display = "none";
+}
+
+function historial_academico(){
+	
+	document.getElementById("historial_academico")
+	.style.display = "block";
+	document.getElementById("datos_personales")
+	.style.display = "none";
+	document.getElementById("experiencia_laboral")
+	.style.display = "none";
+	document.getElementById("habilidades")
+	.style.display = "none";
+}
+function experiencia_laboral(){
+	document.getElementById("experiencia_laboral")
+	.style.display = "block";
+	document.getElementById("datos_personales")
+	.style.display = "none";
+	document.getElementById("historial_academico")
+	.style.display = "none";
+	document.getElementById("habilidades")
+	.style.display = "none";
+}
+function habilidades(){
+	
+	document.getElementById("habilidades")
+	.style.display = "block";
+	document.getElementById("datos_personales")
+	.style.display = "none";
+	document.getElementById("experiencia_laboral")
+	.style.display = "none";
+	document.getElementById("historial_academico")
+	.style.display = "none";
 }

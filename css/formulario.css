@@ -14,7 +14,7 @@ form{
   font-size:20px;
 }
 .container{
-  margin-top:40px;
+ 
   
 }
 h1{
@@ -28,7 +28,7 @@ h1{
 }
 nav{
   
-  margin-top:-40px;
+  
 }
 #plantilla1{
   
@@ -103,4 +103,8 @@ nav{
 #ka{
   background-color:#e0e4dd
 
+}
+#boton_siguiente{
+  
+  margin-top:50px;
 }

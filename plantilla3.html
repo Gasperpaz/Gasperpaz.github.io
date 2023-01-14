@@ -62,7 +62,11 @@
 
 	  <form class="row " name="formulario" action="" >
 		<div id="datos_personales" >
-
+		  <div >
+			<center>
+			  <img src="img_numero1.png" alt="img_numero" class="col-xl-3 ">
+			</center>
+		  </div>
 
 		  <div>
 		    <h1>DATOS PERSONALES</h1>
@@ -117,8 +121,27 @@
 			<label for="foto" class="form-label">Subir foto</label>
 			<input class="form-control" type="file" accept="image/*"onchange="imagen_cv()" id="foto">
 		  </div>
+		  
+		  <div class="row  w-100" id="boton_siguiente">
+			<div class="col-6 ">
+			  <button class="btn btn-warning w-100 " type="button"><a href="index.html">&lt; &lt; ATRAS</a>
+			  </button>
+			</div>
+			<div class="col-6">
+			  <button class="btn btn-warning w-100 " onclick="historial_academico()" > SIGUIENTE >>
+			  </button>
+			</div>
+		  </div>
+		  
 		</div>
 		<div id="historial_academico" style="display:none">
+		  
+		  <div >
+			<center>
+			  <img src="img_numero2.png" alt="img_numero" class="col-xl-3 ">
+			</center>
+		  </div>
+		  
 		  <div>
 			<h1 >HISTORIAL ACADEMICO</h1>
 
@@ -152,8 +175,28 @@
 			<input type="text" class="form-control" id="idioma" required>
 
 		  </div>
+		  
+
+		  <div class="row  w-100" id="boton_siguiente">
+			<div class="col-6 ">
+			  <button  class="btn btn-warning w-100 " onclick="datos_personales()">&lt; &lt; ATRAS
+			  </button>
+			</div>
+			<div class="col-6">
+			  <button class="btn btn-warning w-100 " onclick="experiencia_laboral()" > SIGUIENTE >>
+			  </button>
+			</div>
+		  </div>
+		  
 		</div>
 		<div id="experiencia_laboral"style="display:none">
+		  
+		  <div >
+			<center>
+			  <img src="img_numero3.png" alt="img_numero" class="col-xl-3 ">
+			</center>
+		  </div>
+		  
 		  <div>
 			<h1>EXPERIENCIA LABORAL</h1>
 		  </div>
@@ -162,9 +205,28 @@
 			<label for="experiencia" class="form-label">Experiencia laboral</label>
 			<textarea class="form-control" id="experiencia" rows="5" placeholder="Describe tu puesto laboral, años trabajado y el nombre de la empresa."  ></textarea>
 		  </div>
+		  
+		  <div class="row  w-100" id="boton_siguiente">
+			<div class="col-6 ">
+			  <button  class="btn btn-warning w-100 " onclick="historial_academico()">&lt; &lt; ATRAS
+			  </button>
+			</div>
+			<div class="col-6">
+			  <button class="btn btn-warning w-100 " onclick="habilidades()" > SIGUIENTE >>
+			  </button>
+			</div>
+		  </div>
+		  
 		</div>
 
 		<div id="habilidades"style="display:none">
+		  
+		  <div>
+			<center>
+			  <img src="img_numero4.png" alt="img_numero" class="col-xl-3 ">
+			</center>
+		  </div>
+		  
 		  <div>
 
 			<h1>HABILIDADES</h1>
@@ -178,6 +240,15 @@
 		  <div class="col-12">
 			<button type="submit" onclick="datos_formulario()"  id="btn_cargar_datos">CARGAR DATOS</button>
 		  </div>
+		  
+		  <div class="row  w-100" id="boton_siguiente">
+			<div class="col-6 ">
+			  <button class="btn btn-warning w-100 " onclick="experiencia_laboral()">&lt; &lt; ATRAS
+			  </button>
+			</div>
+
+		  </div>
+		  
 		</div>
 	  </form>
 
