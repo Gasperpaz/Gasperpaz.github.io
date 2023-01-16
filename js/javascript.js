@@ -1,7 +1,7 @@
 
 
 // cuando seleccionas un item se ocultan los otros item
-
+/*
 document.getElementById("datos_personales_visible")
 .addEventListener("click", function(){
 	document.getElementById("datos_personales")
@@ -48,7 +48,7 @@ document.getElementById("habilidades_visible")
 	document.getElementById("historial_academico")
 	.style.display = "none";
 	
-});
+});*/
 
 function datos_formulario(){
 	
@@ -111,7 +111,7 @@ function datos_formulario(){
 }
 
 //funcion para el boton siguiente
-// del formulario
+// del formulario y para el menu colapsable
 
 function datos_personales(){
 	document.getElementById("datos_personales")

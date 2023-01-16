@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,38 +21,33 @@
 
 	<script src="js/bootstrap.min.js"></script>
 	
-	
-
-	
   </head>
 
   <body>
-
+<!-- menu colapsable , aqui se encuentran los
+4 elementos para llenar los datos  -->
 	<div>
-	<nav class="navbar navbar-expand-md bg-light position-fixed w-100 " >
-	  <div class="container-fluid">
-		<a class="navbar-brand" href="#">CV</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
+	  <nav class="navbar navbar-expand-md bg-light position-fixed w-100 " >
+	   <div class="container-fluid">
+		 <a class="navbar-brand" href="#">CV</a>
+		 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		 <span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 			<li class="nav-item">
-			  <a id="datos_personales_visible"class="nav-link " aria-current="page" href="#datos_personales">Datos Personales</a>
+			  <a id="datos_personales_visible"class="nav-link " aria-current="page" onclick="datos_personales()">Datos Personales</a>
 			</li>
 			<li class="nav-item">
-			  <a id="historial_academico_visible"  class="nav-link" href="#historial_academico">Historial academico</a>
+			  <a id="historial_academico_visible"  class="nav-link" onclick="historial_academico()">Historial academico</a>
 			</li>
 			<li class="nav-item">
-			  <a id="experiencia_laboral_visible"class="nav-link " aria-current="page" href="#experiencia_laboral">Experiencia laboral</a>
+			  <a id="experiencia_laboral_visible"class="nav-link " aria-current="page" onclick="experiencia_laboral()" >Experiencia laboral</a>
 			</li>
 			<li class="nav-item">
-			  <a id="habilidades_visible"class="nav-link" href="#habilidades">Habilidades</a>
+			  <a id="habilidades_visible"class="nav-link"onclick="habilidades()" >Habilidades</a>
 			</li>
-			
 		  </ul>
-		  
-		
 		</div>
 	  </div>
 	</nav>
@@ -60,46 +55,43 @@
 	</div>
 	
 	
+	<!-- formulario, se separo en 4 campos (datos personales
+	  historial academico, experiencia laboral y habilidades)
+	  comenzamos con datos personales-->
+	
 <div class="container">
   
-	<form class="row " name="formulario" action="" >
+	<form class="row " name="formulario" action="" method="" >
 	  <div id="datos_personales" >
 	<div >
 	  <center>
-	  <img src="img_numero1.png" alt="img_numero" class="col-xl-3 ">
+	  <img src="img_numero1.png" alt="imgen que representa los 4 pasos para llenar el formulario" class="col-xl-3 ">
 	  </center>
 	</div>
-	
 		  <div>
-			
 		    <h1>DATOS PERSONALES</h1>
 		  </div>
-		
-		
+		  
 	         <div class="col-md-4">
 		        <label for="nombre" class="form-label">Nombre</label>
 		        <input type="text" class="form-control" id="nombre" required>
-		
 	         </div>
+			 
 	         <div class="col-md-4">
 		        <label for="apellido" class="form-label">Apellido</label>
 		        <input type="text" class="form-control" id="apellido" required>
-		
 	         </div>
 	  
 	         <div class="col-md-4">
 		        <label for="correo_electronico" class="form-label">Correo electronico</label>
-		          
-		  
 		          <input type="email" class="form-control" id="correo_electronico" placeholder="name@example.com" required>
-		  
-		        
 	          </div>
+			  
 	          <div class="col-md-6">
 				<label for="nacionalidad" class="form-label">Nacionalidad</label>
 		          <input type="text" class="form-control" id="nacionalidad" required>
-		
 	           </div>
+			   
 	         <div class="col-md-3">
 		           <label for="estado_civil" class="form-label">Estado Civil</label>
 		           <select class="form-select" id="estado_civil" >
@@ -107,46 +99,48 @@
 		             <option>Casado</option>
 		             <option>Soltero</option>
 		           </select>
-		
 	            </div>
+				
 	            <div class="col-md-3">
 		            <label for="edad" class="form-label">Edad</label>
 		            <input type="number" class="form-control" id="edad" required>
-		
 	            </div>
 	  
 	            <div class="col-md-6">
 		           <label for="celular" class="form-label">Celular</label>
 		           <input type="number" class="form-control" id="celular"placeholder="Cod-area + numero sin el 15" required>
-
 	           </div>
+			   
 	          <div class="col-12">
 		          <label for="foto" class="form-label">Subir foto</label>
 				<input class="form-control" type="file" accept="image/*"onchange="imagen_cv()" id="foto">
 	          </div>
+			  
 		<div class="row  w-100" id="boton_siguiente">
 		  <div class="col-6 ">
 			<button class="btn btn-warning w-100 " type="button"><a href="index.html">&lt; &lt; ATRAS</a>
 			</button>
 		  </div>
+		  
 		  <div class="col-6">
 			<button class="btn btn-warning w-100 " onclick="historial_academico()" > SIGUIENTE >>
 				</button>
 		  </div>
-			  </div>
+	    </div>
 	  </div>
+	  
+	  <!-- Este es el segundo campo ,historial academico   -->
 	  
 <div id="historial_academico" style="display:none">
   
   <div >
 	<center>
-	  <img src="img_numero2.png" alt="img_numero" class="col-xl-3 ">
+	  <img src="img_numero2.png" class="col-xl-3 "  alt="imgen que representa los 4 pasos para llenar el formulario">
 	</center>
   </div>
   
 		<div>
 	  <h1 >HISTORIAL ACADEMICO</h1>
-	  
 	    </div>
 
 		<div class="col-md-3">
@@ -158,25 +152,21 @@
 		  <option >Terciario</option>
 		  <option >Universitario completo</option>
 		</select>
-		
-		
-		
 	  </div>
+	  
 	  <div class="col-md-3">
 		<label for="titulo" class="form-label">Titulo </label>
 		<input type="text" class="form-control" id="titulo" required>
-
 	  </div>
 	  
 	  <div class="col-md-6">
 		<label for="cursos" class="form-label">Otos cursos realizado </label>
 		<input type="text" class="form-control" id="cursos" placeholder="ej: curso de electrisista , gasista , etc."  required>
-
 	  </div>
+	  
   <div class="col-md-3"style="display:none">
 		<label for="idioma" class="form-label">Idiomas </label>
 		<input type="text" class="form-control" id="idioma" required>
-
 	  </div>
 	  
   <div class="row  w-100" id="boton_siguiente">
@@ -184,22 +174,24 @@
 	  <button  class="btn btn-warning w-100 " onclick="datos_personales()">&lt; &lt; ATRAS
 	  </button>
 	</div>
+	
 	<div class="col-6">
 	  <button class="btn btn-warning w-100 " onclick="experiencia_laboral()" > SIGUIENTE >>
 	  </button>
 	</div>
   </div>
 	  
-	  </div>
+</div>
+
+<!--  Este es el tercer campo, Experiencia laboral  -->
+
 	  <div id="experiencia_laboral"style="display:none">
 		
-
 		<div >
 		  <center>
-			<img src="img_numero3.png" alt="img_numero" class="col-xl-3 ">
+			<img src="img_numero3.png"  class="col-xl-3 "alt="imgen que representa los 4 pasos para llenar el formulario">
 		  </center>
 		</div>
-		
 		
 		<div>
 		<h1>EXPERIENCIA LABORAL</h1>
@@ -209,33 +201,33 @@
 		<label for="experiencia" class="form-label">Experiencia laboral</label>
 		<textarea class="form-control" id="experiencia" rows="5" placeholder="Describe tu puesto laboral, años trabajado y el nombre de la empresa."  ></textarea>
 	  </div>
+	  
 		<div class="row  w-100" id="boton_siguiente">
 		  <div class="col-6 ">
 			<button  class="btn btn-warning w-100 " onclick="historial_academico()">&lt; &lt; ATRAS
 			</button>
 		  </div>
+		  
 		  <div class="col-6">
 			<button class="btn btn-warning w-100 " onclick="habilidades()" > SIGUIENTE >>
 			</button>
 		  </div>
 		</div>
+     </div>
+	 
+	 <!-- Este es el cuarto campo, habilidades  -->
 	  
-</div>
-	  
-<div id="habilidades"style="display:none">
+     <div id="habilidades"style="display:none">
   
-
-  <div>
-	<center>
-	  <img src="img_numero4.png" alt="img_numero" class="col-xl-3 ">
-	</center>
-  </div>
+       <div>
+	    <center>
+		  <img src="img_numero4.png" alt="imgen que representa los 4 pasos para llenar el formulario" class="col-xl-3 ">
+	    </center>
+       </div>
   
-  
-	  <div>
-		
+	 <div>
 		<h1>HABILIDADES</h1>
-	  </div>
+	 </div>
      
 	  <div class="col-12">
 		<label for="habilidad" class="form-label">Habilidades</label>
@@ -246,33 +238,30 @@
 		<button type="submit" onclick="datos_formulario()"  id="btn_cargar_datos">CARGAR DATOS</button>
 	  </div>
 	  
-  <div class="row  w-100" id="boton_siguiente">
-	<div class="col-6 ">
-	  <button class="btn btn-warning w-100 " onclick="experiencia_laboral()">&lt; &lt; ATRAS
-	  </button>
-	</div>
-	<div class="col-6">
-	  
-	 
-	</div>
-  </div>
-	  
+     <div class="row  w-100" id="boton_siguiente">
+	  <div class="col-6 ">
+	    <button class="btn btn-warning w-100 " onclick="experiencia_laboral()">&lt; &lt; ATRAS
+	    </button>
 	  </div>
-	</form>
+	  
+	 <div class="col-6">
+	 </div>
+    </div>
+   </div>
+  </form>
 
 </div>
 
-
-	
-	<!-- PLANTILLA 1-->
+	<!--    PLANTILLA 1
+	  Esta plantilla esta oculta ,cuando se accione el boton
+	 " cargar datos" se hara visible con todos los datos cargados-->
 	<div id="plantilla"style="display:none">
-	<div class="container " id="planilla1"  >
-
+	<div class="container "  >
 	  <div class="container-fluid">
 		<div class="row">
 		  <div class="col-5 btn btn-primary" >
-
-			<img class="col-12  btn"  id="fotos" width="50%" style="border-radius:100%;" alt="plantilla1"> 
+			
+			<img class="col-12  btn"  id="fotos" width="50%" style="border-radius:100%;" alt="foto de la persona que esta haciendo el curriculum vitae"> 
 			
 			<div id="datos_personales" >
 			  <h4 class="col-12 " id="nombre_apellido"></h4>
@@ -314,17 +303,15 @@
 		</div>
 	  </div>
 	</div>
+	<br>
+	<br>
+	<br>
+ </div>
+ 
+ <!--  javascript  -->
 
-	<br><br><br>
-	
-	  </div>
-<script type="text/javascript" src="js/javascript.js">
-</script>
+   <script type="text/javascript" src="js/javascript.js">
+   </script>
 
-
-	
-
-
-  </body>
-
+ </body>
 </html>
